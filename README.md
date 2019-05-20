@@ -1,21 +1,36 @@
 # Servlet/JSP 演習問題
 
-## 演習1（HTTPリクエスト）
+## 第1章 HTTPリクエスト
 
-次の実行結果となるように以下のプログラムを作成してください。
+#### 演習1-1
 
-- check-fruits.html
-- FruitsListServlet.java（アノテーション：fruitslist）
+```
+フルーツのチェックボックスを用意し、チェックされたフルーツを次画面で表示する。
+```
 
-<br>
+- fruits-list.html
 
-<h1>Fruits</h1>
+<img src="images/1-01.png" alt="演習1" width="800">
 
-<input type="checkbox">Apple
-<input type="checkbox">Orange
-<input type="checkbox">Strawberry
-<input type="checkbox">Watermelon
-<input type="checkbox">Pineapple
-<input type="checkbox">Grape
+- FruitsListServlet.java（@WebServlet：fruitslist）
 
-<button type="submit">SEND</button>
+<img src="images/1-02.png" alt="演習1" width="800">
+
+
+#### 演習1-2
+
+```
+メールアドレスとパスワードの入力ボックスを用意する。
+・メールアドレスが「test@sample.jp」、パスワードが「pass01」の場合、「Login success」と表示
+・上記以外の場合、「Login failure」と表示
+```
+
+- login.html
+
+<img src="images/1-03.png" alt="演習1" width="800">
+
+- LoginSampleServlet.java（@WebServlet：loginsample）
+
+<img src="images/1-04.png" alt="演習1" width="800">
+
+<img src="images/1-05.png" alt="演習1" width="800">
