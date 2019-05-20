@@ -128,9 +128,9 @@ public class ScheduleServlet extends HttpServlet {
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        List<Schedule> scheduleList = Arrays.asList(new Schedule(1, "20xx-06-10 13:00", "〇〇さんとランチ", "梅田"),
-                            new Schedule(1, "20xx-06-11 10:00", "ミーティング", "本社会議室"),
-                            new Schedule(1, "20xx-06-13 19:00", "飲み会", "焼き鳥烏丸"));
+        List<Schedule> scheduleList = Arrays.asList(new Schedule(1, "20xx-06-10 13:00", "〇〇さんとランチ", "日本橋"),
+                            new Schedule(2, "20xx-06-11 10:00", "ミーティング", "本社会議室"),
+                            new Schedule(3, "20xx-06-13 19:00", "飲み会", "焼き鳥烏丸"));
 
         // TODO
     }
@@ -155,7 +155,10 @@ URL「~/(プロジェクト名)/loginsample」に直接アクセスした場合�
 
 ### 演習4-1
 
-POSTでログインし、スケジュール画面（ScheduleServlet）へフォワードしたが、画面を再読み込みするとPOST送信でログイン処理が再度実行されてしまう。<br>
+POSTでログインし、スケジュール画面（ScheduleServlet）へフォワードしたが、画面を再読み込みするとPOST送信でログイン処理が再度実行される。（再読み込み時に以下のようなメッセージが表示される。）
+
+<img src="images/04-01.png" alt="演習1" width="400">
+
 そこで、ログイン成功時のScheduleServletへのフォワードを、ScheduleServletへの**リダイレクト**に修正する。
 
 [解答例](/answer/04-01.md)
