@@ -69,7 +69,7 @@
 ### 演習3-1
 
 ログイン時の表示方法を以下のように変更する。<br>
-・ログイン成功時：スケジュール一覧を表示するScheduleServletへフォワードする<br>
+・ログイン成功時：スケジュール一覧を表示するScheduleServletへフォワードする<br>
 ・ログイン失敗時：ログイン画面へフォワードする<br>
 
 <br>
@@ -143,7 +143,7 @@ public class ScheduleServlet extends HttpServlet {
 
 ### 演習3-2
 
-URL「~/(プロジェクト名)/loginsample」に直接アクセスした場合、ログイン画面が表示されるように修正する。
+URL「~/(プロジェクト名)/loginsample」に直接アクセスした場合、ログイン画面が表示されるように修正する。
 
 [解答例](/answer/03-02.md)
 
