@@ -175,10 +175,10 @@ POSTでログインし、スケジュール画面（ScheduleServlet）へフォ�
 
 - **LoginSampleServlet.java**　（パッケージ：jp.sample.servlet、@WebServlet：loginsample）
     - ログイン成功時：
-　セッションにメールアドレスを格納する。
-　WelcomServletへリダイレクトする。（ようこそ画面の表示）
+    　セッションにメールアドレスを格納する。
+    　WelcomServletへリダイレクトする。（ようこそ画面の表示）
     - ログイン失敗時：
-　ログイン画面（login.html）へリダイレクトする。
+    　ログイン画面（login.html）へリダイレクトする。
 
 - **WelcomServlet.java**　（パッケージ：jp.sample.servlet、@WebServlet：welcome）
     - メールアドレスを表示する。
