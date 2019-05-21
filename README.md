@@ -97,7 +97,7 @@
 
 <br>
 
-**ScheduleServlet.java** （パッケージ：jp.sample.servlet、@WebServlet：loginsample）
+**ScheduleServlet.java** （パッケージ：jp.sample.servlet、@WebServlet：schedule）
 
 <img src="images/03-01.png" alt="演習1" width="800">
 
@@ -157,8 +157,119 @@ URL「~/(プロジェクト名)/loginsample」に直接アクセスした場合�
 
 POSTでログインし、スケジュール画面（ScheduleServlet）へフォワードしたが、画面を再読み込みするとPOST送信でログイン処理が再度実行される。（再読み込み時に以下のようなメッセージが表示される。）
 
-<img src="images/04-01.png" alt="演習1" width="400">
+<img src="images/04-01.png" alt="演習4-1" width="400">
 
 そこで、ログイン成功時のScheduleServletへのフォワードを、ScheduleServletへの**リダイレクト**に修正する。
 
 [解答例](/answer/04-01.md)
+
+<br>
+<hr>
+
+
+## 第5章 セッション
+
+### 演習5-1
+
+ログインの処理を以下のように修正する。
+
+- **LoginSampleServlet.java**　（パッケージ：jp.sample.servlet、@WebServlet：loginsample）
+ログイン成功時：
+　セッションにメールアドレスを格納する。
+　WelcomServletへリダイレクトする。（ようこそ画面の表示）
+ログイン失敗時：
+　ログイン画面（login.html）へリダイレクトする。
+
+- **WelcomServlet.java**　（パッケージ：jp.sample.servlet、@WebServlet：welcome）
+    - メールアドレスを表示する。
+    - スケジュールリンクのクリックで、スケジュール画面へ遷移する。
+
+- **ScheduleServlet.java** （パッケージ：jp.sample.servlet、@WebServlet：schedule）
+    - メールアドレスを表示する。
+    - スケジュール表を表示する。
+
+<br>
+
+&emsp;ようこそ画面
+
+<img src="images/05-01.png" alt="演習5-1" width="800">
+
+&emsp;スケジュール画面
+
+<img src="images/05-02.png" alt="演習5-1" width="800">
+
+[解答例](/answer/05-01.md)
+
+<br>
+
+### 演習5-2
+
+ようこそ画面にログアウトリンクを追加し、リンククリックでLogoutSampleServletの処理を行う。
+
+- **LogoutSampleServlet.java** （パッケージ：jp.sample.servlet、@WebServlet：logoutsample）
+    - セッションを破棄する。
+    - ログイン画面にフォワードする。
+
+<img src="images/05-03.png" alt="演習5-1" width="800">
+
+&emsp;ログアウト後
+
+<img src="images/05-04.png" alt="演習5-1" width="800">
+
+[解答例](/answer/05-02.md)
+
+<br>
+
+### 演習5-3
+
+URL「~/(プロジェクト名)/schedule」に直接アクセスした時、ログイン中でない場合はログイン画面に遷移する。ログイン中の場合はスケジュール画面を表示する。
+
+※他のサーブレットについても同様の対応をしてみましょう。
+
+[解答例](/answer/05-03.md)
+
+<br>
+<hr>
+
+## 第6章 JSP
+
+### 演習6-1
+
+サーブレット側でPrintWriterを使ってHTMLを書いていくのは非常に煩雑であるため、主に画面表示をするサーブレットはJSP（JavaServer Pages）に切り替える。
+
+WelcomeServletに相当するJSPを作成し、LoginSampleServletからJSPにフォワードする。
+
+- **welcome.jsp** （配置場所：WebContent/WEB-INF）
+- **LoginSampleServlet.java**
+    - ログイン成功時、welcome.jspにフォワードする。
+
+[解答例](/answer/06-01.md)
+
+<br>
+
+### 演習6-2
+
+ScheduleServlet内のHTML生成部分を担当するJSPを作成し、ScheduleServletからJSPにフォワードする。
+
+- **schedule.jsp** （配置場所：WebContent/WEB-INF）
+- **ScheduleServlet.java** （パッケージ：jp.sample.servlet、@WebServlet：schedule）
+    - セッションがない場合はログイン画面に遷移する。
+    - スケジュールのリストを作成する。
+    - スケジュールのリストをリクエストに格納する。
+    - schedule.jspにフォワードする。
+
+[解答例](/answer/06-02.md)
+
+<br>
+<hr>
+
+## 第7章 EL式、JSTL
+
+### 演習7-1
+
+welcome.jspとschedule.jspをEL式およびJSTLを使用するように修正する。
+
+JSTLは下記URLからダウンロードしてください。
+https://tomcat.apache.org/download-taglibs.cgi
+
+[解答例](/answer/07-01.md)
