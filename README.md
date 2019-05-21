@@ -159,7 +159,8 @@ POSTでログインし、スケジュール画面（ScheduleServlet）へフォ�
 
 <img src="images/04-01.png" alt="演習4-1" width="400">
 
-そこで、ログイン成功時のScheduleServletへのフォワードを、ScheduleServletへの**リダイレクト**に修正する。
+そこで、ログイン成功時のScheduleServletへのフォワードを、ScheduleServletへのリダイレクトに修正する。<br>
+また、ログイン失敗時もlogin.htmlへのリダイレクトに修正する。
 
 [解答例](/answer/04-01.md)
 
