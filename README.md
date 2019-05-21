@@ -174,10 +174,10 @@ POSTでログインし、スケジュール画面（ScheduleServlet）へフォ�
 ログインの処理を以下のように修正する。
 
 - **LoginSampleServlet.java**　（パッケージ：jp.sample.servlet、@WebServlet：loginsample）
-ログイン成功時：
+    - ログイン成功時：
 　セッションにメールアドレスを格納する。
 　WelcomServletへリダイレクトする。（ようこそ画面の表示）
-ログイン失敗時：
+    - ログイン失敗時：
 　ログイン画面（login.html）へリダイレクトする。
 
 - **WelcomServlet.java**　（パッケージ：jp.sample.servlet、@WebServlet：welcome）
@@ -251,7 +251,7 @@ WelcomeServlet内のHTML生成部分を担当するJSPを作成し、WelcomeServ
 
 ### 演習6-2
 
-ScheduleServlet内のHTML生成部分を担当するJSPを作成し、ScheduleServletからJSPにフォワードする。
+ScheduleServlet内のHTML生成部分を担当するJSPを作成し、ScheduleServletからJSPにフォワードする。
 
 - **schedule.jsp** （配置場所：WebContent/WEB-INF）
 - **ScheduleServlet.java** （パッケージ：jp.sample.servlet、@WebServlet：schedule）
