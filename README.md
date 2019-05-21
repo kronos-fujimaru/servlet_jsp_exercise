@@ -180,7 +180,7 @@ POSTでログインし、スケジュール画面（ScheduleServlet）へフォ�
 ログイン失敗時：
 　ログイン画面（login.html）へリダイレクトする。
 
-- **WelcomServlet.java**　（パッケージ：jp.sample.servlet、@WebServlet：welcome）
+- **WelcomServlet.java**　（パッケージ：jp.sample.servlet、@WebServlet：welcome）
     - メールアドレスを表示する。
     - スケジュールリンクのクリックで、スケジュール画面へ遷移する。
 
@@ -237,11 +237,13 @@ URL「~/(プロジェクト名)/schedule」に直接アクセスした時、ロ�
 
 サーブレット側でPrintWriterを使ってHTMLを書いていくのは非常に煩雑であるため、主に画面表示をするサーブレットはJSP（JavaServer Pages）に切り替える。
 
-WelcomeServletに相当するJSPを作成し、LoginSampleServletからJSPにフォワードする。
+WelcomeServlet内のHTML生成部分を担当するJSPを作成し、WelcomeServletからJSPにフォワードする。
 
 - **welcome.jsp** （配置場所：WebContent/WEB-INF）
 - **LoginSampleServlet.java**
-    - ログイン成功時、welcome.jspにフォワードする。
+    - ログイン成功時、WelcomeServletへリダイレクトする。
+- **WelcomServlet.java**
+    - welcome.jspへフォワードする。
 
 [解答例](/answer/06-01.md)
 
@@ -256,7 +258,7 @@ ScheduleServlet内のHTML生成部分を担当するJSPを作成し、ScheduleSe
     - セッションがない場合はログイン画面に遷移する。
     - スケジュールのリストを作成する。
     - スケジュールのリストをリクエストに格納する。
-    - schedule.jspにフォワードする。
+    - schedule.jspへフォワードする。
 
 [解答例](/answer/06-02.md)
 
@@ -269,7 +271,7 @@ ScheduleServlet内のHTML生成部分を担当するJSPを作成し、ScheduleSe
 
 welcome.jspとschedule.jspをEL式およびJSTLを使用するように修正する。
 
-JSTLは下記URLからダウンロードしてください。
+JSTLは下記URLからダウンロードしてください。<br>
 https://tomcat.apache.org/download-taglibs.cgi
 
 [解答例](/answer/07-01.md)
