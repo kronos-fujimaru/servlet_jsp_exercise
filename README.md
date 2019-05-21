@@ -174,10 +174,10 @@ POSTでログインし、スケジュール画面（ScheduleServlet）へフォ�
 ログインの処理を以下のように修正する。
 
 - **LoginSampleServlet.java**　（パッケージ：jp.sample.servlet、@WebServlet：loginsample）
-    - ログイン成功時：
-    　セッションにメールアドレスを格納する。
+    - ログイン成功時：<br>
+    　セッションにメールアドレスを格納する。<br>
     　WelcomServletへリダイレクトする。（ようこそ画面の表示）
-    - ログイン失敗時：
+    - ログイン失敗時：<br>
     　ログイン画面（login.html）へリダイレクトする。
 
 - **WelcomServlet.java**　（パッケージ：jp.sample.servlet、@WebServlet：welcome）
