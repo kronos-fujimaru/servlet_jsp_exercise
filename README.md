@@ -15,6 +15,8 @@
 
 <img src="images/01-02.png" alt="演習1" width="800">
 
+<br>
+
 [解答例](/answer/01-01.md)
 
 <br>
@@ -37,9 +39,10 @@
 
 <img src="images/01-05.png" alt="演習1" width="800">
 
+<br>
+
 [解答例](/answer/01-02.md)
 
-<br>
 <hr>
 
 ## 第2章 HTTPレスポンス
@@ -59,9 +62,10 @@
 
 <img src="images/02-02.png" alt="演習1" width="800">
 
+<br>
+
 [解答例](/answer/02-01.md)
 
-<br>
 <hr>
 
 ## 第3章 リクエストのフォワード
@@ -137,6 +141,8 @@ public class ScheduleServlet extends HttpServlet {
 }
 ```
 
+<br>
+
 [解答例](/answer/03-01.md)
 
 <br>
@@ -145,9 +151,10 @@ public class ScheduleServlet extends HttpServlet {
 
 URL「~/(プロジェクト名)/loginsample」に直接アクセスした場合、ログイン画面が表示されるように修正する。
 
+<br>
+
 [解答例](/answer/03-02.md)
 
-<br>
 <hr>
 
 
@@ -162,9 +169,10 @@ POSTでログインし、スケジュール画面（ScheduleServlet）へフォ�
 そこで、ログイン成功時のScheduleServletへのフォワードを、ScheduleServletへのリダイレクトに修正する。<br>
 また、ログイン失敗時もlogin.htmlへのリダイレクトに修正する。
 
+<br>
+
 [解答例](/answer/04-01.md)
 
-<br>
 <hr>
 
 
@@ -199,6 +207,8 @@ POSTでログインし、スケジュール画面（ScheduleServlet）へフォ�
 
 <img src="images/05-02.png" alt="演習5-1" width="800">
 
+<br>
+
 [解答例](/answer/05-01.md)
 
 <br>
@@ -217,6 +227,8 @@ POSTでログインし、スケジュール画面（ScheduleServlet）へフォ�
 
 <img src="images/05-04.png" alt="演習5-1" width="800">
 
+<br>
+
 [解答例](/answer/05-02.md)
 
 <br>
@@ -227,9 +239,10 @@ URL「~/(プロジェクト名)/schedule」に直接アクセスした時、ロ�
 
 ※他のサーブレットについても同様の対応をしてみましょう。
 
+<br>
+
 [解答例](/answer/05-03.md)
 
-<br>
 <hr>
 
 ## 第6章 JSP
@@ -246,6 +259,8 @@ WelcomeServlet内のHTML生成部分を担当するJSPを作成し、WelcomeServ
 - **WelcomServlet.java**
     - welcome.jspへフォワードする。
 
+<br>
+
 [解答例](/answer/06-01.md)
 
 <br>
@@ -261,9 +276,10 @@ ScheduleServlet内のHTML生成部分を担当するJSPを作成し、ScheduleSe
     - スケジュールのリストをリクエストに格納する。
     - schedule.jspへフォワードする。
 
+<br>
+
 [解答例](/answer/06-02.md)
 
-<br>
 <hr>
 
 ## 第7章 EL式、JSTL
@@ -274,5 +290,7 @@ welcome.jspとschedule.jspをEL式およびJSTLを使用するように修正す
 
 JSTLは下記URLからダウンロードしてください。<br>
 https://tomcat.apache.org/download-taglibs.cgi
+
+<br>
 
 [解答例](/answer/07-01.md)
