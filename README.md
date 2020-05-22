@@ -1,6 +1,6 @@
 # Servlet/JSP 演習問題
 
-Eclipse上で 動的Webプロジェクト「java_web_ex」を作成して課題に取り組んでください。
+Eclipse上で 動的Webプロジェクト「servlet_jsp」を作成して課題に取り組んでください。
 
 <br>
 
