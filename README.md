@@ -15,7 +15,7 @@ Eclipse上で 動的Webプロジェクト「servlet_jsp_ex」を作成して課�
 
 <img src="images/01-01.png" alt="演習1" width="800">
 
-**FruitsListServlet.java** （パッケージ：jp.sample.servlet、URLパターン：fruitslist）
+**FruitsListServlet.java** （パッケージ：jp.sample.servlet、URLパターン：/fruitslist）
 
 <img src="images/01-02.png" alt="演習1" width="800">
 
@@ -37,7 +37,7 @@ Eclipse上で 動的Webプロジェクト「servlet_jsp_ex」を作成して課�
 
 <img src="images/01-03.png" alt="演習1" width="800">
 
-**LoginSampleServlet.java** （パッケージ：jp.sample.servlet、URLパターン：loginsample）
+**LoginSampleServlet.java** （パッケージ：jp.sample.servlet、URLパターン：/loginsample）
 
 <img src="images/01-04.png" alt="演習1" width="800">
 
@@ -60,7 +60,7 @@ Eclipse上で 動的Webプロジェクト「servlet_jsp_ex」を作成して課�
 
 <br>
 
-**LoginSampleServlet.java** （パッケージ：jp.sample.servlet、URLパターン：loginsample）
+**LoginSampleServlet.java** （パッケージ：jp.sample.servlet、URLパターン：/loginsample）
 
 <img src="images/02-01.png" alt="演習1" width="800">
 
@@ -105,7 +105,7 @@ Eclipse上で 動的Webプロジェクト「servlet_jsp_ex」を作成して課�
 
 <br>
 
-**ScheduleServlet.java** （パッケージ：jp.sample.servlet、URLパターン：schedule）
+**ScheduleServlet.java** （パッケージ：jp.sample.servlet、URLパターン：/schedule）
 
 <img src="images/03-01.png" alt="演習1" width="800">
 
@@ -186,18 +186,18 @@ POSTでログインし、スケジュール画面（ScheduleServlet）へフォ�
 
 ログインの処理を以下のように修正する。
 
-- **LoginSampleServlet.java**　（パッケージ：jp.sample.servlet、@URLパターン：loginsample）
+- **LoginSampleServlet.java**　（パッケージ：jp.sample.servlet、URLパターン：/loginsample）
     - ログイン成功時：<br>
     　セッションにメールアドレスを格納する。<br>
     　WelcomServletへリダイレクトする。（ようこそ画面の表示）
     - ログイン失敗時：<br>
     　ログイン画面（login.html）へリダイレクトする。
 
-- **WelcomServlet.java**　（パッケージ：jp.sample.servlet、URLパターン：welcome）
+- **WelcomServlet.java**　（パッケージ：jp.sample.servlet、URLパターン：/welcome）
     - メールアドレスを表示する。
     - スケジュールリンクのクリックで、スケジュール画面へ遷移する。
 
-- **ScheduleServlet.java** （パッケージ：jp.sample.servlet、URLパターン：schedule）
+- **ScheduleServlet.java** （パッケージ：jp.sample.servlet、URLパターン：/schedule）
     - メールアドレスを表示する。
     - スケジュール表を表示する。
 
@@ -221,7 +221,7 @@ POSTでログインし、スケジュール画面（ScheduleServlet）へフォ�
 
 ようこそ画面にログアウトリンクを追加し、リンククリックでLogoutSampleServletの処理を行う。
 
-- **LogoutSampleServlet.java** （パッケージ：jp.sample.servlet、URLパターン：logoutsample）
+- **LogoutSampleServlet.java** （パッケージ：jp.sample.servlet、URLパターン：/logoutsample）
     - セッションを破棄する。
     - ログイン画面にフォワードする。
 
@@ -274,7 +274,7 @@ WelcomeServlet内のHTML生成部分を担当するJSPを作成し、WelcomeServ
 ScheduleServlet内のHTML生成部分を担当するJSPを作成し、ScheduleServletからJSPにフォワードする。
 
 - **schedule.jsp** （配置場所：WebContent/WEB-INF）
-- **ScheduleServlet.java** （パッケージ：jp.sample.servlet、URLパターン：schedule）
+- **ScheduleServlet.java** （パッケージ：jp.sample.servlet、URLパターン：/schedule）
     - セッションがない場合はログイン画面に遷移する。
     - スケジュールのリストを作成する。
     - スケジュールのリストをリクエストに格納する。
